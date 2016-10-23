@@ -3,7 +3,7 @@
     "license": "MIT",
     "type": "project",
     "description": "Symfony bundle for user feedback",
-    "version": "3.0.0",
+    "version": "1.0.0",
     "keywords": [
         "feedback",
         "symfony"
