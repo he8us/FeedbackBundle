@@ -2,8 +2,8 @@
     "name": "he8us/feedback-bundle",
     "license": "MIT",
     "type": "project",
-    "description": "Symfony bundle for user feedback",
-    "version": "1.0.0",
+    "description": "Symfony 3 bundle for user feedback",
+    "version": "1.0.1",
     "keywords": [
         "feedback",
         "symfony"
