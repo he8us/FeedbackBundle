@@ -16,7 +16,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Translation\DataCollectorTranslator;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
@@ -94,6 +93,14 @@ class FeedbackAdminController extends Controller
         if (!$request->isXmlHttpRequest()) {
             throw new NotFoundHttpException($this->getTranslator()->trans('page.not_found'));
         }
+    }
+
+    /**
+     * @return TranslatorInterface
+     */
+    private function getTranslator():TranslatorInterface
+    {
+        return $this->get('translator');
     }
 
     /**
@@ -186,13 +193,5 @@ class FeedbackAdminController extends Controller
         $session->getFlashBag()->add('success', $this->getTranslator()->trans("feedback.message.sent_success"));
 
         return true;
-    }
-
-    /**
-     * @return TranslatorInterface
-     */
-    private function getTranslator():TranslatorInterface
-    {
-        return $this->get('translator');
     }
 }
