@@ -24,17 +24,6 @@ use Symfony\Component\Form\Test\TypeTestCase;
 class FeedbackTypeTest extends TypeTestCase
 {
 
-    protected function getExtensions()
-    {
-        $categoryService = $this->createMock(CategoryService::class);
-        $type = new FeedbackType($categoryService);
-
-        return array(
-            // register the type instances with the PreloadedExtension
-            new PreloadedExtension(array($type), array()),
-        );
-    }
-
     /**
      * @test
      */
@@ -111,6 +100,17 @@ class FeedbackTypeTest extends TypeTestCase
         foreach (array_keys($formData) as $key) {
             $this->assertArrayHasKey($key, $view->children);
         }
+    }
+
+    protected function getExtensions()
+    {
+        $categoryService = $this->createMock(CategoryService::class);
+        $type = new FeedbackType($categoryService);
+
+        return [
+            // register the type instances with the PreloadedExtension
+            new PreloadedExtension([$type], []),
+        ];
     }
 
 }

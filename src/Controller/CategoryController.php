@@ -32,6 +32,14 @@ class CategoryController extends Controller
     }
 
     /**
+     * @return CategoryService
+     */
+    private function getCategoryService():CategoryService
+    {
+        return $this->get('he8us_feedback.category_service');
+    }
+
+    /**
      * Creates a new category entity.
      *
      * @param Request $request
@@ -132,13 +140,5 @@ class CategoryController extends Controller
         }
 
         return $this->redirectToRoute('he8us_category_admin_homepage');
-    }
-
-    /**
-     * @return CategoryService
-     */
-    private function getCategoryService():CategoryService
-    {
-        return $this->get('he8us_feedback.category_service');
     }
 }
