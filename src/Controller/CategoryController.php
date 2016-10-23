@@ -3,6 +3,8 @@
 namespace He8us\FeedbackBundle\Controller;
 
 use He8us\FeedbackBundle\Entity\Category;
+use He8us\FeedbackBundle\Form\Type\CategoryType;
+use He8us\FeedbackBundle\Service\CategoryService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -39,7 +41,7 @@ class CategoryController extends Controller
     public function newAction(Request $request)
     {
         $category = new Category();
-        $form = $this->createForm('He8us\FeedbackBundle\Form\CategoryType', $category);
+        $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -96,7 +98,7 @@ class CategoryController extends Controller
     public function editAction(Request $request, Category $category)
     {
         $deleteForm = $this->createDeleteForm($category);
-        $editForm = $this->createForm('He8us\FeedbackBundle\Form\CategoryType', $category);
+        $editForm = $this->createForm(CategoryType::class, $category);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -126,18 +128,16 @@ class CategoryController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($category);
-            $em->flush($category);
+            $this->getCategoryService()->deleteCategory($category);
         }
 
         return $this->redirectToRoute('he8us_category_admin_homepage');
     }
 
     /**
-     * @return \He8us\FeedbackBundle\Service\CategoryService
+     * @return CategoryService
      */
-    private function getCategoryService():\He8us\FeedbackBundle\Service\CategoryService
+    private function getCategoryService():CategoryService
     {
         return $this->get('he8us_feedback.category_service');
     }

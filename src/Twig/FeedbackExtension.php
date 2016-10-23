@@ -10,7 +10,6 @@ namespace He8us\FeedbackBundle\Twig;
 
 use He8us\FeedbackBundle\Entity\Feedback;
 use He8us\FeedbackBundle\Form\Type\FeedbackWithCaptcha;
-use He8us\FeedbackBundle\Service\CategoryService;
 use Symfony\Component\Form\FormFactoryInterface;
 use Twig_Environment;
 use Twig_SimpleFunction;
@@ -33,25 +32,16 @@ class FeedbackExtension extends \Twig_Extension
     private $twig;
 
     /**
-     * @var CategoryService
-     */
-    private $categoryService;
-
-
-    /**
      * FeedbackExtension constructor.
      *
      * @param FormFactoryInterface $formFactory
      * @param Twig_Environment     $twig
-     * @param CategoryService      $categoryService
      */
     public function __construct(
         FormFactoryInterface $formFactory,
-        Twig_Environment $twig,
-        CategoryService $categoryService
+        Twig_Environment $twig
     ) {
         $this->twig = $twig;
-        $this->categoryService = $categoryService;
         $this->formFactory = $formFactory;
     }
 
@@ -70,15 +60,11 @@ class FeedbackExtension extends \Twig_Extension
      */
     public function widget()
     {
-        $categories = $this->categoryService->getCategories();
         $feedback = new Feedback();
-        $form = $this->formFactory->create(FeedbackWithCaptcha::class, $feedback, [
-            'categories' => $categories,
-        ]);
+        $form = $this->formFactory->create(FeedbackWithCaptcha::class, $feedback);
 
         return $this->twig->render('He8usFeedbackBundle:Feedback:index.html.twig', [
-            'form'       => $form->createView(),
-            'categories' => $categories,
+            'form' => $form->createView(),
         ]);
     }
 

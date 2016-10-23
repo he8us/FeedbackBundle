@@ -1,11 +1,11 @@
 <table class="table responsive-table table-bordered">
     <thead>
     <tr>
-        <th>{{ 'he8us.feedback.layout.category.id' | trans }}</th>
-        <th>{{ 'he8us.feedback.layout.category.name' | trans }}</th>
-        <th>{{ 'he8us.feedback.layout.category.label' | trans }}</th>
-        <th>{{ 'he8us.feedback.layout.category.deleted' | trans }}</th>
-        <th>{{ 'he8us.feedback.layout.category.actions' | trans }}</th>
+        <th>{{ 'feedback.category.id' | trans }}</th>
+        <th>{{ 'feedback.category.name' | trans }}</th>
+        <th>{{ 'feedback.category.label' | trans }}</th>
+        <th>{{ 'feedback.category.deleted' | trans }}</th>
+        <th>{{ 'feedback.category.actions' | trans }}</th>
     </tr>
     </thead>
     <tbody>
@@ -14,14 +14,20 @@
             <td><a href="{{ path('he8us_category_admin_show', { 'id': category.id }) }}">{{ category.id }}</a></td>
             <td>{{ category.name }}</td>
             <td>{{ category.label }}</td>
-            <td>{% if category.deleted %}Yes{% else %}No{% endif %}</td>
+            <td>
+                {% if category.deleted %}
+                    {{ 'feedback.category.deleted.yes' | trans }}
+                {% else %}
+                    {{ 'feedback.category.deleted.no' | trans }}
+                {% endif %}
+            </td>
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('he8us_category_admin_show', { 'id': category.id }) }}">{{ 'he8us.feedback.layout.category.list.show' | trans }}</a>
+                        <a href="{{ path('he8us_category_admin_show', { 'id': category.id }) }}">{{ 'feedback.category.show' | trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('he8us_category_admin_edit', { 'id': category.id }) }}">{{ 'he8us.feedback.layout.category.list.edit' | trans }}</a>
+                        <a href="{{ path('he8us_category_admin_edit', { 'id': category.id }) }}">{{ 'feedback.category.edit' | trans }}</a>
                     </li>
                 </ul>
             </td>
@@ -31,7 +37,7 @@
     {% else %}
         <tr>
             <td colspan="5">
-                <div class="alert alert-info">{{ "he8us.feedback.layout.feedback.list.nocontent"|trans }}</div>
+                <div class="alert alert-info">{{ "feedback.category.nocontent"|trans }}</div>
             </td>
         </tr>
     {% endfor %}
@@ -40,6 +46,6 @@
 
 <ul>
     <li>
-        <a href="{{ path('he8us_category_admin_new') }}">{{ 'he8us.feedback.layout.category.list.create' | trans }}</a>
+        <a href="{{ path('he8us_category_admin_new') }}">{{ 'feedback.category.create' | trans }}</a>
     </li>
 </ul>

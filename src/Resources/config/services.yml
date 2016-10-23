@@ -1,7 +1,7 @@
 services:
     he8us_feedback.extension:
         class: He8us\FeedbackBundle\Twig\FeedbackExtension
-        arguments: ["@form.factory", "@twig", "@he8us_feedback.category_service"]
+        arguments: ["@form.factory", "@twig"]
         tags:
             - { name: twig.extension }
 
