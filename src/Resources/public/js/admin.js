@@ -2,9 +2,9 @@
     'use strict';
 
     var FeedbackAdmin = function (el, options) {
-        this._opt = $.extend({}, this.options, options)
+        this._opt = $.extend({}, this.options, options);
         this.init(el);
-    }
+    };
 
     FeedbackAdmin.prototype.options = {
         selectors: {
@@ -14,7 +14,7 @@
             markAsRead: ".js-feedback-item-markas-read",
             markAsDone: ".js-feedback-item-markas-done"
         }
-    }
+    };
 
     FeedbackAdmin.prototype.init = function (el) {
         this._$el = $(el);
@@ -24,7 +24,7 @@
         this._$markAsDone = this._$el.find(this._opt.selectors.markAsDone);
 
         this.bindEvents();
-    }
+    };
 
     FeedbackAdmin.prototype.bindEvents = function () {
         var self = this;
@@ -44,18 +44,18 @@
             e.preventDefault();
             var id = self.getItemId(this);
             self.markAs(id, 'done');
-        })
+        });
 
         this._$markAsRead.on('click', function (e) {
             e.preventDefault();
             var id = self.getItemId(this);
             self.markAs(id, 'read');
         })
-    }
+    };
 
     FeedbackAdmin.prototype.getItemId = function (node) {
         return $(node).parents(this._opt.selectors.item).data('item-id')
-    }
+    };
 
     FeedbackAdmin.prototype.delete = function (id) {
         var sure;
@@ -75,13 +75,13 @@
                 }
             }
         });
-    }
+    };
 
     FeedbackAdmin.prototype.showDetails = function (id) {
-        var $item = $("#entity_" + id)
+        var $item = $("#entity_" + id);
 
         $item.slideToggle();
-    }
+    };
 
     FeedbackAdmin.prototype.markAs = function (id, status) {
         $.ajax({
@@ -96,13 +96,13 @@
                 }
             }
         });
-    }
+    };
 
     $.fn.feedbackAdmin = function (options) {
         this.each(function () {
             return new FeedbackAdmin(this, options);
         })
-    }
+    };
 
     $('.js-feedback').feedbackAdmin();
 

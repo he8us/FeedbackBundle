@@ -81,7 +81,7 @@ class FeedbackType extends AbstractType
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'feedback.feedback.send',
-                'attr' => [
+                'attr'  => [
                     'class' => 'btn btn-primary btn-block',
                 ],
             ]);

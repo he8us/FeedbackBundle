@@ -18,10 +18,10 @@ class CategoryType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'feedback.category.name'
+                'label' => 'feedback.category.name',
             ])
             ->add('label', TextType::class, [
-                'label' => 'feedback.category.label'
+                'label' => 'feedback.category.label',
             ]);
     }
 

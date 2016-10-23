@@ -16,7 +16,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Translation\DataCollectorTranslator;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
@@ -97,6 +96,14 @@ class FeedbackAdminController extends Controller
     }
 
     /**
+     * @return TranslatorInterface
+     */
+    private function getTranslator():TranslatorInterface
+    {
+        return $this->get('translator');
+    }
+
+    /**
      * @param $feedback
      *
      * @throws NotFoundHttpException
@@ -166,7 +173,7 @@ class FeedbackAdminController extends Controller
      * @param Request  $request
      * @param Feedback $feedback
      */
-    public function sendMessage(Request $request, Feedback $feedback): void
+    public function sendMessage(Request $request, Feedback $feedback)
     {
         $form = $request->get('message');
         $mailer = $this->container->get('mailer');
@@ -184,15 +191,5 @@ class FeedbackAdminController extends Controller
         /** @var Session $session */
         $session = $this->container->get('session');
         $session->getFlashBag()->add('success', $this->getTranslator()->trans("feedback.message.sent_success"));
-
-        return true;
-    }
-
-    /**
-     * @return TranslatorInterface
-     */
-    private function getTranslator():TranslatorInterface
-    {
-        return $this->get('translator');
     }
 }
