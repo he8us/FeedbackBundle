@@ -16,6 +16,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Translation\DataCollectorTranslator;
+use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * Class FeedbackAdminController
@@ -90,7 +92,7 @@ class FeedbackAdminController extends Controller
     private function validateRequest(Request $request)
     {
         if (!$request->isXmlHttpRequest()) {
-            throw new NotFoundHttpException("Not found!");
+            throw new NotFoundHttpException($this->getTranslator()->trans('page.not_found'));
         }
     }
 
@@ -102,7 +104,7 @@ class FeedbackAdminController extends Controller
     private function validateFeedback(Feedback $feedback = null)
     {
         if (!$feedback) {
-            throw new NotFoundHttpException("Not found!");
+            throw new NotFoundHttpException($this->getTranslator()->trans('feedback.not_found'));
         }
     }
 
@@ -181,8 +183,16 @@ class FeedbackAdminController extends Controller
 
         /** @var Session $session */
         $session = $this->container->get('session');
-        $session->getFlashBag()->add('success', $this->get('translator')->trans("Message send successfully."));
+        $session->getFlashBag()->add('success', $this->getTranslator()->trans("feedback.message.sent_success"));
 
         return true;
+    }
+
+    /**
+     * @return TranslatorInterface
+     */
+    private function getTranslator():TranslatorInterface
+    {
+        return $this->get('translator');
     }
 }

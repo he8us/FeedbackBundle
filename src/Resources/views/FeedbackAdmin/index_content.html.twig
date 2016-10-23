@@ -4,24 +4,24 @@
 
 <ul class="nav nav-tabs">
     <li role="presentation" {% if status==STATUS_NONE %}class="active"{% endif %}>
-        <a href="{{ url('he8us_feedback_admin_homepage') }}">{{ "he8us.feedback.layout.feedback.list.new"|trans }}</a>
+        <a href="{{ url('he8us_feedback_admin_homepage') }}">{{ "feedback.feedback.list.new"|trans }}</a>
     </li>
     <li role="presentation" {% if status==STATUS_READ %}class="active"{% endif %}>
-        <a href="{{ url('he8us_feedback_admin_homepage', {status: STATUS_READ}) }}">{{ "he8us.feedback.layout.feedback.list.read"|trans }}</a>
+        <a href="{{ url('he8us_feedback_admin_homepage', {status: STATUS_READ}) }}">{{ "feedback.feedback.list.read"|trans }}</a>
     </li>
     <li role="presentation" {% if status==STATUS_DONE %}class="active"{% endif %}>
-        <a href="{{ url('he8us_feedback_admin_homepage',{status: STATUS_DONE}) }}">{{ "he8us.feedback.layout.feedback.list.done"|trans }}</a>
+        <a href="{{ url('he8us_feedback_admin_homepage',{status: STATUS_DONE}) }}">{{ "feedback.feedback.list.done"|trans }}</a>
     </li>
 </ul>
 <table class="table responsive-table table-bordered js-feedback">
     <thead>
     <tr>
-        <th>{{ 'he8us.feedback.layout.feedback.list.id'|trans }}</th>
-        <th>{{ 'he8us.feedback.layout.feedback.list.sender'|trans }}</th>
-        <th>{{ 'he8us.feedback.layout.feedback.list.category'|trans }}</th>
-        <th>{{ 'he8us.feedback.layout.feedback.list.ip'|trans }}</th>
-        <th>{{ 'he8us.feedback.layout.feedback.list.page'|trans }}</th>
-        <th>{{ 'he8us.feedback.layout.feedback.list.actions'|trans }}</th>
+        <th>{{ 'feedback.feedback.id'|trans }}</th>
+        <th>{{ 'feedback.feedback.sender'|trans }}</th>
+        <th>{{ 'feedback.feedback.category'|trans }}</th>
+        <th>{{ 'feedback.feedback.ip'|trans }}</th>
+        <th>{{ 'feedback.feedback.page'|trans }}</th>
+        <th>{{ 'feedback.feedback.actions'|trans }}</th>
     </tr>
     </thead>
     <tbody>
@@ -34,22 +34,22 @@
             <td>{{ feedback.referrer }}</td>
             <td>
                 <a href="#" class="feedback-show-content js-feedback-item-show"
-                   title="{{ "he8us.feedback.layout.feedback.list.show_content"|trans }}">
+                   title="{{ "feedback.feedback.show"|trans }}">
                     <i class="fa fa-bars"></i>
                 </a>
 
                 <a href="#" class="feedback-mark-as-read js-feedback-item-markas-read"
-                   title="{{ "he8us.feedback.layout.feedback.list.markas.read"|trans }}">
+                   title="{{ "feedback.feedback.markas.read"|trans }}">
                     <i class="fa fa-circle"></i>
                 </a>
 
                 <a href="#" class="feedback-mark-as-done js-feedback-item-markas-done"
-                   title="{{ "he8us.feedback.layout.feedback.list.markas.done"|trans }}">
+                   title="{{ "feedback.feedback.markas.done"|trans }}">
                     <i class="fa fa-check-circle"></i>
                 </a>
 
                 <a href="#" class="feedback-delete js-feedback-item-delete"
-                   title="{{ "he8us.feedback.layout.feedback.list.delete"|trans }}">
+                   title="{{ "feedback.feedback.delete"|trans }}">
                     <i class="fa fa-trash"></i>
                 </a>
             </td>
@@ -58,10 +58,12 @@
             <td colspan="6">
                 <div class="row">
                     <div class="col-md-12">
+                        <h3>{{ 'feedback.feedback.content' }}</h3>
                         {{ feedback.body }}
 
-                        <hr/>
                         {% if feedback.screenshot is not null %}
+                            <hr/>
+                            <h3>{{ 'feedback.feedback.screenshot' }}</h3>
                             <a href="{{ feedback.screenshot }}" target="_blank">
                                 <img src="{{ feedback.screenshot }}" class="admin-screenshot-preview-image"/>
                             </a>
@@ -74,7 +76,7 @@
     {% else %}
         <tr>
             <td colspan="6">
-                <div class="alert alert-info">{{ "he8us.feedback.layout.feedback.list.nocontent"|trans }}</div>
+                <div class="alert alert-info">{{ "feedback.feedback.nocontent"|trans }}</div>
             </td>
         </tr>
     {% endfor %}

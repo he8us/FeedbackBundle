@@ -1,10 +1,10 @@
 <ul>
     <li>
-        <a href="{{ path('he8us_category_admin_homepage') }}">{{ 'he8us.feedback.layout.category.back_to_list' | trans }}</a>
+        <a href="{{ path('he8us_category_admin_homepage') }}">{{ 'feedback.category.back_to_list' | trans }}</a>
     </li>
     <li>
         {{ form_start(delete_form) }}
-        <input type="submit" value="{{ 'he8us.feedback.layout.category.delete' | trans }}">
+        <input type="submit" value="{{ 'feedback.category.delete' | trans }}">
         {{ form_end(delete_form) }}
     </li>
 </ul>
@@ -12,6 +12,6 @@
 
 {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-<input type="submit" value="Edit"/>
+        <input type="submit" value="{{ 'feedback.category.edit' | trans }}"/>
 {{ form_end(edit_form) }}
 

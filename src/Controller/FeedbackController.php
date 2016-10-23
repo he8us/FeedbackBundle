@@ -8,7 +8,6 @@
 
 namespace He8us\FeedbackBundle\Controller;
 
-use He8us\FeedbackBundle\Entity\Category;
 use He8us\FeedbackBundle\Entity\Feedback;
 use He8us\FeedbackBundle\Form\Type\FeedbackWithCaptcha;
 use He8us\FeedbackBundle\Service\FeedbackService;
@@ -32,15 +31,13 @@ class FeedbackController extends Controller
     public function newAction(Request $request): JsonResponse
     {
         $feedback = new Feedback();
-        $form = $this->createForm(FeedbackWithCaptcha::class, $feedback, [
-            'categories' => $this->getCategories(),
-        ]);
+        $form = $this->createForm(FeedbackWithCaptcha::class, $feedback);
 
         $form->handleRequest($request);
 
         if ($form->isValid()) {
             $this->persistFeedback($request, $feedback);
-            $this->shouldSendMail($feedback);
+            $this->sendMail($feedback);
 
             return JsonResponse::create([
                 'status' => true,
@@ -51,14 +48,6 @@ class FeedbackController extends Controller
             'error'  => true,
             'errors' => (string) $form->getErrors(true, false),
         ], 500);
-    }
-
-    /**
-     * @return Category[]
-     */
-    private function getCategories()
-    {
-        return $this->get('he8us_feedback.category_service')->getCategories();
     }
 
     /**
@@ -74,28 +63,25 @@ class FeedbackController extends Controller
 
     /**
      * @param Feedback $feedback
-     *
-     * @return bool
      */
-    private function shouldSendMail(Feedback $feedback): bool
+    private function sendMail(Feedback $feedback)
     {
         if (
             !$this->container->hasParameter('feedback_email')
             || !$this->container->hasParameter('system_email')
             || !$this->container->hasParameter('project_name')
         ) {
-            return false;
+            return;
         }
 
         $translator = $this->get('translator');
         $message = $this->get('mailer')->createMessage();
         $message = $message
-            ->setSubject($translator->trans('new.feedback'))
+            ->setSubject($translator->trans('feedback.feedback.received'))
             ->addFrom($this->getParameter('system_email'), $this->getParameter('project_name'))
             ->setTo($this->getParameter('feedback_email'), $this->getParameter('project_name'))
             ->setBody($feedback->getBody(), 'text/html');
 
         $this->get('mailer')->send($message);
-        return true;
     }
 }

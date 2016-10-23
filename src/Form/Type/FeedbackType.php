@@ -63,14 +63,14 @@ class FeedbackType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => false,
                 'attr'  => [
-                    'placeholder' => 'feedback.email',
+                    'placeholder' => 'feedback.feedback.email',
                     'class'       => 'form-control',
                 ],
             ])
             ->add('body', TextareaType::class, [
                 'label' => false,
                 'attr'  => [
-                    'placeholder' => 'feedback.message',
+                    'placeholder' => 'feedback.feedback.message',
                     'class'       => 'form-control',
                 ],
             ])
@@ -80,6 +80,7 @@ class FeedbackType extends AbstractType
                 ],
             ])
             ->add('submit', SubmitType::class, [
+                'label' => 'feedback.feedback.send',
                 'attr' => [
                     'class' => 'btn btn-primary btn-block',
                 ],

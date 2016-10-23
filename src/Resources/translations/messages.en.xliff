@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-10-23T22:05:09Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="0250ff744dce2f135e8d1d746d13f38a6308c9ae" resname="feedback.category.actions">
+        <source>feedback.category.actions</source>
+        <target>Actions</target>
+        <jms:reference-file line="8">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6e47ffa4c1d2563accd89282c2b2655d6416bb8a" resname="feedback.category.back_to_list">
+        <source>feedback.category.back_to_list</source>
+        <target>Back to feedback list</target>
+        <jms:reference-file line="3">/../src/He8us/FeedbackBundle/Resources/views/Category/edit_content.html.twig</jms:reference-file>
+        <jms:reference-file line="3">/../src/He8us/FeedbackBundle/Resources/views/Category/new_content.html.twig</jms:reference-file>
+        <jms:reference-file line="30">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6e6d79cfb9970722c76faf8e366033efb2081196" resname="feedback.category.create">
+        <source>feedback.category.create</source>
+        <target>Create a category</target>
+        <jms:reference-file line="49">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="9">/../src/He8us/FeedbackBundle/Resources/views/Category/new_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ce807275668dc3963308b5abb8afec26160829df" resname="feedback.category.delete">
+        <source>feedback.category.delete</source>
+        <target>Delete category</target>
+        <jms:reference-file line="7">/../src/He8us/FeedbackBundle/Resources/views/Category/edit_content.html.twig</jms:reference-file>
+        <jms:reference-file line="37">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a6aa59ce70f51543cdd962cf7c7b6878f9e8c046" resname="feedback.category.deleted">
+        <source>feedback.category.deleted</source>
+        <target>Category deleted</target>
+        <jms:reference-file line="7">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="16">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="391a98b891ef2baf2bb06bcb35d781c46f6d26bc" resname="feedback.category.deleted.no">
+        <source>feedback.category.deleted.no</source>
+        <target>Yes</target>
+        <jms:reference-file line="21">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="21">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="55db9e3051ccac0eef6b39287944fca7cd567016" resname="feedback.category.deleted.yes">
+        <source>feedback.category.deleted.yes</source>
+        <target>No</target>
+        <jms:reference-file line="19">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="19">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="de053eb0d089384b2e05437682ff0fe9906509f2" resname="feedback.category.edit">
+        <source>feedback.category.edit</source>
+        <target>Edit the category</target>
+        <jms:reference-file line="15">/../src/He8us/FeedbackBundle/Resources/views/Category/edit_content.html.twig</jms:reference-file>
+        <jms:reference-file line="30">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="33">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bcd2467bf26c5931585acbf39b71ac4fb28d23c9" resname="feedback.category.edit.title">
+        <source>feedback.category.edit.title</source>
+        <target>Category editing</target>
+        <jms:reference-file line="4">/../src/He8us/FeedbackBundle/Resources/views/Category/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="83eec8c7a5e5793ca3fe6c5cb62091d3723b87d9" resname="feedback.category.id">
+        <source>feedback.category.id</source>
+        <target>ID</target>
+        <jms:reference-file line="4">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="4">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1530d570d5f7066a5828f65f2718d4cbf1c3d915" resname="feedback.category.label">
+        <source>feedback.category.label</source>
+        <target>Label</target>
+        <jms:reference-file line="24">/../src/He8us/FeedbackBundle/Form/Type/CategoryType.php</jms:reference-file>
+        <jms:reference-file line="6">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="12">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ed677d9853469b720d85f65de8585cff29956146" resname="feedback.category.list.title">
+        <source>feedback.category.list.title</source>
+        <target>Category list</target>
+        <jms:reference-file line="4">/../src/He8us/FeedbackBundle/Resources/views/Category/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="23df3853f783c2d7c89a703eeb598193b9410f10" resname="feedback.category.name">
+        <source>feedback.category.name</source>
+        <target>Name</target>
+        <jms:reference-file line="21">/../src/He8us/FeedbackBundle/Form/Type/CategoryType.php</jms:reference-file>
+        <jms:reference-file line="5">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+        <jms:reference-file line="8">/../src/He8us/FeedbackBundle/Resources/views/Category/show_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8f938a17df78d75eddc1d6a98d1751917c6d4740" resname="feedback.category.new.title">
+        <source>feedback.category.new.title</source>
+        <target>New category</target>
+        <jms:reference-file line="4">/../src/He8us/FeedbackBundle/Resources/views/Category/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9b0d25c05cf3acaaed9ac5ebf27171ef029da07f" resname="feedback.category.nocontent">
+        <source>feedback.category.nocontent</source>
+        <target>No category</target>
+        <jms:reference-file line="40">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8c1ea82bd08a638b587f8ca64878e65fd4995b6b" resname="feedback.category.show">
+        <source>feedback.category.show</source>
+        <target>Show category</target>
+        <jms:reference-file line="27">/../src/He8us/FeedbackBundle/Resources/views/Category/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8571dce40a5de594f0cc98b33c9c3a8424799683" resname="feedback.category.show.title">
+        <source>feedback.category.show.title</source>
+        <target>Category details</target>
+        <jms:reference-file line="4">/../src/He8us/FeedbackBundle/Resources/views/Category/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c9276e07fca1f2bee1ebb4c603833ae6be0b7fa4" resname="feedback.close">
+        <source>feedback.close</source>
+        <target>Close</target>
+        <jms:reference-file line="41">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+        <jms:reference-file line="50">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="75afd07eaa6be9ca25cc48eb2121108b18fca772" resname="feedback.fail.text">
+        <source>feedback.fail.text</source>
+        <target>There was an unexpected error. Please retry in a few minutes</target>
+        <jms:reference-file line="47">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9c065ae01e65e4b4d8b3605f1de08cdef6a6262d" resname="feedback.fail.title">
+        <source>feedback.fail.title</source>
+        <target>Error</target>
+        <jms:reference-file line="45">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="03a223436d80e1ba805a7f43a3014142336ad182" resname="feedback.feedback.actions">
+        <source>feedback.feedback.actions</source>
+        <target>Actions</target>
+        <jms:reference-file line="24">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="59823d93225bf11817ab5e7e187a4540f2ad5270" resname="feedback.feedback.captcha">
+        <source>feedback.feedback.captcha</source>
+        <target>Captcha</target>
+        <jms:reference-file line="32">/../src/He8us/FeedbackBundle/Form/Type/FeedbackWithCaptcha.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2c810b81f008e827992f970be500aa39107b225" resname="feedback.feedback.category">
+        <source>feedback.feedback.category</source>
+        <target>Category</target>
+        <jms:reference-file line="21">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6638f6f4061773efc503ee047218df8981b0c342" resname="feedback.feedback.delete">
+        <source>feedback.feedback.delete</source>
+        <target>Delete feedback</target>
+        <jms:reference-file line="52">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="790173ccf8fe0943d1e0e08bd070bb8f4a76c375" resname="feedback.feedback.email">
+        <source>feedback.feedback.email</source>
+        <target>Email</target>
+        <jms:reference-file line="66">/../src/He8us/FeedbackBundle/Form/Type/FeedbackType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3bf0886f9b1eab1c90e00062eccb88e981d15538" resname="feedback.feedback.id">
+        <source>feedback.feedback.id</source>
+        <target>ID</target>
+        <jms:reference-file line="19">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c1cdfd99c4b3aa4171a84729aa0288b17232505f" resname="feedback.feedback.ip">
+        <source>feedback.feedback.ip</source>
+        <target>IP Address</target>
+        <jms:reference-file line="22">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3b7c0175808d7d4370b0fe1ffdba9a5c3382f3f8" resname="feedback.feedback.list.done">
+        <source>feedback.feedback.list.done</source>
+        <target>Done</target>
+        <jms:reference-file line="13">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="869867c8a3d72f35452251ba94e1dc94c7401406" resname="feedback.feedback.list.new">
+        <source>feedback.feedback.list.new</source>
+        <target>New</target>
+        <jms:reference-file line="7">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="72fe50c19a64dd92afe7600c6137aa463d979b7c" resname="feedback.feedback.list.read">
+        <source>feedback.feedback.list.read</source>
+        <target>Read</target>
+        <jms:reference-file line="10">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c86994a0216b41825a17b2f3123968bc31594daf" resname="feedback.feedback.list.title">
+        <source>feedback.feedback.list.title</source>
+        <target>Feedback list</target>
+        <jms:reference-file line="4">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3dda8da62a0df9e65a3a5f34d616751e9fc2ae2b" resname="feedback.feedback.markas.done">
+        <source>feedback.feedback.markas.done</source>
+        <target>Mark as done</target>
+        <jms:reference-file line="47">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7a5e8acbcaec848557a4dd3d46c6e132807018ba" resname="feedback.feedback.markas.read">
+        <source>feedback.feedback.markas.read</source>
+        <target>Mark as read</target>
+        <jms:reference-file line="42">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="05caacdd8aacdad4e08b86f050dea3c8ca58fec2" resname="feedback.feedback.message">
+        <source>feedback.feedback.message</source>
+        <target>Message</target>
+        <jms:reference-file line="73">/../src/He8us/FeedbackBundle/Form/Type/FeedbackType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7fec0b715d1dc98c6608c724a006ff4a380fa264" resname="feedback.feedback.nocontent">
+        <source>feedback.feedback.nocontent</source>
+        <target>No feedback</target>
+        <jms:reference-file line="79">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4a5c225f57d59cb318dd81aa3bab8f65a8ff80af" resname="feedback.feedback.page">
+        <source>feedback.feedback.page</source>
+        <target>Page</target>
+        <jms:reference-file line="23">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c68b274b8ae3ceecdd089406d91a9ab7364c093" resname="feedback.feedback.received">
+        <source>feedback.feedback.received</source>
+        <target>New feedback received</target>
+        <jms:reference-file line="80">/../src/He8us/FeedbackBundle/Controller/FeedbackController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8901b60cf317b586447b25f0db065c2bee95e410" resname="feedback.feedback.reply.message">
+        <source>feedback.feedback.reply.message</source>
+        <target>Message</target>
+        <jms:reference-file line="23">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/reply_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="74e5ad7340638050f3029ab3a67dc149521ff04a" resname="feedback.feedback.reply.send">
+        <source>feedback.feedback.reply.send</source>
+        <target>Send</target>
+        <jms:reference-file line="34">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/reply_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="df261fc4053551f0d481fc5e15e93da9f3e989cc" resname="feedback.feedback.reply.subject">
+        <source>feedback.feedback.reply.subject</source>
+        <target>Subject</target>
+        <jms:reference-file line="14">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/reply_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1acb6cea17625980ca9707869d6f3f5da876406d" resname="feedback.feedback.reply.subject.prefix">
+        <source>feedback.feedback.reply.subject.prefix</source>
+        <target>Reply:</target>
+        <jms:reference-file line="16">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/reply_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a750cdd55252da59b41326dc50fc77cdc9df3e6" resname="feedback.feedback.reply.title">
+        <source>feedback.feedback.reply.title</source>
+        <target>Reply to the feedback</target>
+        <jms:reference-file line="3">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/reply.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3ea088a1365bac4b578b17f0907908c8f11d7ce1" resname="feedback.feedback.reply.to">
+        <source>feedback.feedback.reply.to</source>
+        <target>To</target>
+        <jms:reference-file line="19">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/reply_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f74392effeefca4a2ccfde69fac202551e3a6dbd" resname="feedback.feedback.report">
+        <source>feedback.feedback.report</source>
+        <target>Report a bug</target>
+        <jms:reference-file line="6">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="564f591182bb55934c3433ad2054cfd722b5d45f" resname="feedback.feedback.send">
+        <source>feedback.feedback.send</source>
+        <target>Send</target>
+        <jms:reference-file line="83">/../src/He8us/FeedbackBundle/Form/Type/FeedbackType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f06f88023aaf2bdd1a36bea93dd5ff8985104ce7" resname="feedback.feedback.sender">
+        <source>feedback.feedback.sender</source>
+        <target>Sender</target>
+        <jms:reference-file line="20">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4bae8ff1f848c3c7cf4ec44a4c8dfb34ba743e70" resname="feedback.feedback.show">
+        <source>feedback.feedback.show</source>
+        <target>See the feedback</target>
+        <jms:reference-file line="37">/../src/He8us/FeedbackBundle/Resources/views/FeedbackAdmin/index_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2454b40c4471ac1c943dbaebbb4644e030795024" resname="feedback.message.sent_success">
+        <source>feedback.message.sent_success</source>
+        <target>Message successfully sent</target>
+        <jms:reference-file line="186">/../src/He8us/FeedbackBundle/Controller/FeedbackAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a6f73bc9c3400b099f4fc05c71db9dcc1f7d142a" resname="feedback.not_found">
+        <source>feedback.not_found</source>
+        <target>Feedback not found</target>
+        <jms:reference-file line="107">/../src/He8us/FeedbackBundle/Controller/FeedbackAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8a0d4af014f60c5365b6d484021bd2f831a7e34b" resname="feedback.screenshot">
+        <source>feedback.screenshot</source>
+        <target>Join a screenshot</target>
+        <jms:reference-file line="23">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cc9022fe398bec52a2b3ce7e4aba3a91e4dd2809" resname="feedback.thank.text">
+        <source>feedback.thank.text</source>
+        <target>Thanks you very much for your feedback</target>
+        <jms:reference-file line="38">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ca7977c5a10a141858d6b86045d04b6459293a93" resname="feedback.thank.title">
+        <source>feedback.thank.title</source>
+        <target>Thank you !</target>
+        <jms:reference-file line="36">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="35eb869b2b1e9b25ad4de365e821505c6f6c55f6" resname="feedback.title">
+        <source>feedback.title</source>
+        <target>Feedback</target>
+        <jms:reference-file line="14">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8d54e63c652383864c0d416394de5277c6a1e587" resname="feedback.wait">
+        <source>feedback.wait</source>
+        <target>Please wait...</target>
+        <jms:reference-file line="31">/../src/He8us/FeedbackBundle/Resources/views/Feedback/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d77ca6596699a3eb805c5f32dbd3a6020af29de0" resname="page.not_found">
+        <source>page.not_found</source>
+        <target>Page not found</target>
+        <jms:reference-file line="95">/../src/He8us/FeedbackBundle/Controller/FeedbackAdminController.php</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

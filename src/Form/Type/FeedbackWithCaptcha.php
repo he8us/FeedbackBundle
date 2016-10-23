@@ -29,7 +29,7 @@ class FeedbackWithCaptcha extends FeedbackType
             'reload' => true,
             'as_url' => true,
             'attr'   => [
-                'placeholder' => 'Captcha',
+                'placeholder' => 'feedback.feedback.captcha',
             ],
         ]);
     }
